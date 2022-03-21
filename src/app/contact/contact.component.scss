@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 64px 120px 64px 120px;
     background-color: #000000;
 }
 
@@ -41,6 +40,11 @@ header {
 textarea {
     height: 150px;
     resize: none !important;
+    color: white;
+}
+
+input {
+    color: white;
 }
 
 button {

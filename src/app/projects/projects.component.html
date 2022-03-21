@@ -1,10 +1,10 @@
-<div class="projects" id="projects">
+<div class="padding-120" id="projects">
     <h2>My Projects</h2>
 
     <div class="projectsButtons">
-        <button (click)="showAll()">All</button>
-        <button (click)="showAngular()">Angular</button>
-        <button (click)="showJavaScript()">Java Script</button>
+        <button mat-button (click)="showAll()">All</button>
+        <button mat-button (click)="showAngular()">Angular</button>
+        <button mat-button (click)="showJavaScript()">Java Script</button>
     </div>
 
     <div class="projectsWork">
@@ -13,7 +13,8 @@
             <div class="description">
                 <h3>Ring of Fire</h3>
                 <p>Angular, HTML, SCSS based drinking Game for a nice evening with friends</p>
-                <a href="https://ring-of-fire-5c2c0.web.app/">See More</a>
+                <a href="https://ring-of-fire-5c2c0.web.app/">Check it out</a>
+                <a href="https://github.com/MarcelRegh/Ring-of-Fire" class="git-link"><img class="mt-16" src="assets/icons/icons8-github-48 (1).png"></a>
             </div>
         </div>
 
@@ -22,7 +23,8 @@
             <div class="description">
                 <h3>Ring of Fire</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolorum sunt harum facilis error</p>
-                <a href="">See More</a>
+                <a href="">Check it out</a>
+                <a href="" class="git-link"><img class="mt-16" src="assets/icons/icons8-github-48 (1).png"></a>
             </div>
         </div>
 
@@ -31,16 +33,18 @@
             <div class="description">
                 <h3>Pokedex</h3>
                 <p>JavaScript, HTML, CSS based Pokédex with data from <br> a REST-API to see all the <br> Pokémon Stats and Moves</p>
-                <a href="https://marcelregh.de/Pokedex/Pokedex.html">See More</a>
+                <a href="https://marcelregh.de/Pokedex/Pokedex.html">Check it out</a>
+                <a href="https://github.com/MarcelRegh/PokeDex" class="git-link"><img class="mt-16" src="assets/icons/icons8-github-48 (1).png"></a>
             </div>
         </div>
         
         <div *ngIf="javaScript" class="card">
-            <a href="/"><img src="assets/img/Profile.jpg"></a>
+            <img src="assets/img/Profile.jpg">
             <div class="description">
                 <h3>Ring of Fire</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolorum sunt harum facilis error</p>
-                <a href="">See More</a>
+                <a href="">Check it out</a>
+                <a href="" class="git-link"><img class="mt-16" src="assets/icons/icons8-github-48 (1).png"></a>
             </div>
         </div>
     </div>

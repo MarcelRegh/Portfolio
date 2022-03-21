@@ -9,7 +9,25 @@ mat-toolbar {
     }
 
     &-row {
+        height: 100%;
         justify-content: space-between;
         padding: 0;
     }
+}
+
+.paddinglr-120 {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.hidde-decoration {
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .paddinglr-120 {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    
 }

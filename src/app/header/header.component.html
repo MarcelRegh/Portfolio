@@ -1,14 +1,14 @@
-<mat-toolbar class="padding-120" style="height: 64px;">
+<mat-toolbar class="paddinglr-120" style="height: 64px;">
     <mat-toolbar-row>
 
         <img routerLink="/" src="assets/img/icons8-programming-flag-48.png">
 
         <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
         <mat-menu #menu="matMenu">
-          <a href=""><button mat-menu-item>Home</button></a>
-          <a href="#skills"><button mat-menu-item>Skills</button></a>
-          <button mat-menu-item>Projects</button>
-          <button mat-menu-item>About</button>
+          <a class="hidde-decoration" href=""><button mat-menu-item>Home</button></a>
+          <a class="hidde-decoration" href="#skills"><button mat-menu-item>Skills</button></a>
+          <a class="hidde-decoration" href="#projects"><button mat-menu-item>Projects</button></a>
+          <a class="hidde-decoration" href="#about"><button mat-menu-item>About</button></a>
         </mat-menu>
         
 

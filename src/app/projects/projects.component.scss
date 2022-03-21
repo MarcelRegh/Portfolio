@@ -1,25 +1,23 @@
-.projects {
+#projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 64px 120px 64px 120px;
     color: white;
     background-color: #000000;
-    
+
     h2 {
         margin-top: 0;
         margin-bottom: 32px;
     }
 
-    &Work {
+    .projectsWork {
         max-width: 700px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin-top: 32px;
-
     }
 
     button {
@@ -30,13 +28,12 @@
         color: white;
         border: 2px solid #fa2759;
         background-color: #000000;
-    
+
         &:hover {
             cursor: pointer;
             background-color: #fa2759;
         }
-    
-    
+
         &:focus {
             background-color: #fa2759;
         }
@@ -48,7 +45,6 @@
     height: 300px;
     margin: 8px;
     position: relative;
-    cursor: pointer;
     float: left;
 
     &:hover .description {
@@ -84,15 +80,30 @@
         text-decoration: none;
         border-radius: 10px;
         background-color: #fa2759;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .git-link {
+        padding: 0;
+        background-color: rgba($color: #000000, $alpha: 0);
+    }
+
+    img {
+        height: 48px;
+        width: 48px;
+        object-fit: cover;
     }
 }
 
 @media (max-width: 900px) {
-    .projects {
+    #projects {
         padding-left: 32px;
         padding-right: 32px;
 
-        &Buttons {
+        .projectsButtons {
             display: flex;
             flex-direction: column;
         }
@@ -100,10 +111,6 @@
         button {
             margin-top: 8px;
             margin-bottom: 8px;
-        }
-
-        &Work {
-            flex-direction: column;
         }
     }
 }

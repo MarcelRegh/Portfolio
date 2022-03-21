@@ -1,4 +1,4 @@
-<div id="contact">
+<div id="contact" class="padding-120">
     <header>
         <h1>Contact me.</h1>
         <span>Get in touch via the form below, or ba emailing <span class="e-mail">metyxs@gmail.com</span></span>
@@ -8,24 +8,24 @@
         <div>
             <mat-form-field class="width-100" appearance="outline">
                 <mat-label>Name</mat-label>
-                <input matInput>
+                <input matInput required="">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field class="width-100" appearance="outline">
                 <mat-label>E-mail</mat-label>
-                <input matInput>
+                <input matInput required="" type="email">
             </mat-form-field>
         </div>
 
         <div>
             <mat-form-field appearance="outline" class="width-100">
                 <mat-label>Messege</mat-label>
-                <textarea matInput></textarea>
+                <textarea matInput required=""></textarea>
             </mat-form-field>
         </div>
 
-        <button type="submit">Submit</button>
+        <button mat-button type="submit">Submit</button>
     </form>
 </div>
