@@ -1,0 +1,47 @@
+<div class="projects" id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projectsButtons">
+        <button (click)="showAll()">All</button>
+        <button (click)="showAngular()">Angular</button>
+        <button (click)="showJavaScript()">Java Script</button>
+    </div>
+
+    <div class="projectsWork">
+        <div *ngIf="angular" class="card">
+            <img src="assets/img/ringoffire.jpg">
+            <div class="description">
+                <h3>Ring of Fire</h3>
+                <p>Angular, HTML, SCSS based drinking Game for a nice evening with friends</p>
+                <a href="https://ring-of-fire-5c2c0.web.app/">See More</a>
+            </div>
+        </div>
+
+        <div *ngIf="angular" class="card">
+            <img src="assets/img/Profile.jpg">
+            <div class="description">
+                <h3>Ring of Fire</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolorum sunt harum facilis error</p>
+                <a href="">See More</a>
+            </div>
+        </div>
+
+        <div *ngIf="javaScript" class="card">
+            <img src="assets/img/pokedex.png">
+            <div class="description">
+                <h3>Pokedex</h3>
+                <p>JavaScript, HTML, CSS based Pokédex with data from <br> a REST-API to see all the <br> Pokémon Stats and Moves</p>
+                <a href="https://marcelregh.de/Pokedex/Pokedex.html">See More</a>
+            </div>
+        </div>
+        
+        <div *ngIf="javaScript" class="card">
+            <a href="/"><img src="assets/img/Profile.jpg"></a>
+            <div class="description">
+                <h3>Ring of Fire</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolorum sunt harum facilis error</p>
+                <a href="">See More</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #000000;
+
+    img:hover {
+        cursor: pointer;
+    }
+
+    &-row {
+        justify-content: space-between;
+        padding: 0;
+    }
+}

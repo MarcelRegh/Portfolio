@@ -1,0 +1,27 @@
+<mat-toolbar class="padding-120">
+    <mat-toolbar-row>
+
+        <img routerLink="/" src="assets/img/icons8-programming-flag-48.png">
+
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+        <mat-menu #menu="matMenu">
+          <a href=""><button mat-menu-item>Home</button></a>
+          <a href="#skills"><button mat-menu-item>Skills</button></a>
+          <button mat-menu-item>Projects</button>
+          <button mat-menu-item>About</button>
+        </mat-menu>
+        
+
+    </mat-toolbar-row>
+
+    <!-- <mat-toolbar-row>
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar-row> -->
+</mat-toolbar>

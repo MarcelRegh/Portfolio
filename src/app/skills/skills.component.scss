@@ -1,0 +1,84 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 120px 64px 120px;
+    color: white;
+    background-color: #1a1a1a;
+}
+
+.skillContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 700px;
+
+
+
+    &Wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &Card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 255ms ease-in-out;
+        }
+
+        &Pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 8px;
+            top: 40px;
+            background-color: white;
+            box-shadow: 0 0 12px 0 #000000;
+            border-radius: 100%;
+        }
+    
+        &Type {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            width: 200px;
+            height: 125px;
+            color: black;
+            background-color: white;
+            box-shadow: 0 0 12px 0 #000000;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .skills {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (max-width: 720px) {
+    .skillContainer {
+        width: 500px
+    }
+}
+
+@media (max-width: 720px) {
+    .skillContainer {
+        width: 300px;
+    }
+}

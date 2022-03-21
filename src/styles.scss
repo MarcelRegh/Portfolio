@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%;
+    scroll-behavior: smooth;
+} 
+
+body { margin: 0; font-family: 'Inter';}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+span {
+    color: white;
+}
+
+.ml-16 {
+    margin-left: 16px;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.padding-120 {
+    padding: 0px 120px 0px 120px;
+}   
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
