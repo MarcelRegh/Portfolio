@@ -46,7 +46,7 @@ export class ContactComponent implements OnInit {
       this.http
         .post(this.post.endPoint, this.post.body(this.contact))
         .subscribe({
-          next: (response) => console.log(response),
+          next: (response) =>{ console.log(response); ngForm.resetForm() },
           error: (error) => console.error(error),
           complete: () => console.info('send post complete'),
         });
