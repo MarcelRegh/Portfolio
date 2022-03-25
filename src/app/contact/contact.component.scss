@@ -61,3 +61,14 @@ button {
         transition: 225ms ease-in-out;
     }
 }
+
+.contact-form {
+    width: 50%;
+}
+
+@media (max-width: 650px) {
+    .contact-form {
+        width: 100%;
+    }
+    
+}

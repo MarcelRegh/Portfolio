@@ -33,11 +33,11 @@
             cursor: pointer;
             background-color: #fa2759;
         }
-
-        &:focus {
-            background-color: #fa2759;
-        }
     }
+}
+
+.focus {
+    background-color: #fa2759 !important; 
 }
 
 .card {
