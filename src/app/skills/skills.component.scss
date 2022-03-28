@@ -43,7 +43,7 @@
             padding: 8px;
             top: 40px;
             background-color: white;
-            box-shadow: 0 0 12px 0 #000000;
+            box-shadow: 0 0 12px 0 rgba($color: #000000, $alpha: 0.2);
             border-radius: 100%;
         }
     
@@ -57,7 +57,7 @@
             height: 125px;
             color: black;
             background-color: white;
-            box-shadow: 0 0 12px 0 #000000;
+            box-shadow: 0 0 12px 0 rgba($color: #000000, $alpha: 0.2);
             border-radius: 10px;
         }
     }
