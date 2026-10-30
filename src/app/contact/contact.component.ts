@@ -25,7 +25,7 @@ export class ContactComponent implements OnInit {
    */
   post = {
     // Where to send the post request Ex. www.my-domain/sendMail.php
-    endPoint: '/send_mail/send_mail.php',
+    endPoint: this.getMailEndPoint(),
     // What to send, notice JSON.stringify
     body: (payload: any) => JSON.stringify(payload),
     // How to send, notice Content-Type and responseType
@@ -40,6 +40,12 @@ export class ContactComponent implements OnInit {
   sendState: 'idle' | 'sending' | 'success' | 'error' = 'idle';
 
   constructor(private http: HttpClient) { }
+
+  private getMailEndPoint(): string {
+    const host = window.location.hostname;
+    const isLocal = host === 'localhost' || host === '127.0.0.1';
+    return isLocal ? '/send_mail/send_mail.php' : '/.netlify/functions/send-mail';
+  }
 
   ngOnInit() { }
 
