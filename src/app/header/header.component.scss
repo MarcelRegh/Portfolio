@@ -1,0 +1,33 @@
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #000000;
+
+    img:hover {
+        cursor: pointer;
+    }
+
+    &-row {
+        height: 100%;
+        justify-content: space-between;
+        padding: 0;
+    }
+}
+
+.paddinglr-120 {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.hidde-decoration {
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .paddinglr-120 {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    
+}

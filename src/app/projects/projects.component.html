@@ -1,0 +1,57 @@
+<div class="padding-120" id="projects">
+  <h2>My Projects</h2>
+
+  <div class="projectsButtons">
+    <button mat-button (click)="showAll()" id="all" class="focus">All</button>
+    <button mat-button (click)="showAngular()" id="angular">Angular</button>
+    <button mat-button (click)="showJavaScript()" id="javaScript">Java Script</button>
+  </div>
+
+  <div class="projectsWork">
+    @if (angular) {
+      <div class="card">
+        <img src="assets/img/ringoffire.jpg">
+        <div class="description">
+          <h3>Ring of Fire</h3>
+          <p>Angular, HTML, SCSS based drinking Game for a nice evening with friends</p>
+          <a href="https://ring-of-fire-5c2c0.web.app/">Check it out</a>
+          <a href="https://github.com/MarcelRegh/Ring-of-Fire" class="git-link"><img class="mt-16" src="assets/icons/icons8-github-48 (1).png"></a>
+        </div>
+      </div>
+    }
+
+    <!-- <div *ngIf="angular" class="card">
+    <img src="assets/img/Profile.jpg">
+    <div class="description">
+      <h3>Ring of Fire</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, dolorum sunt harum facilis error</p>
+      <a href="">Check it out</a>
+      <a href="" class="git-link"><img class="mt-16" src="assets/icons/icons8-github-48 (1).png"></a>
+    </div>
+  </div> -->
+
+  @if (javaScript) {
+    <div class="card">
+      <img src="assets/img/pokedex.jpg">
+      <div class="description">
+        <h3>Pokédex</h3>
+        <p>JavaScript, HTML, CSS based Pokédex with data from <br> a REST-API to see all the <br> Pokémon Stats and Moves</p>
+        <a href="https://marcelregh.de/Pokedex/Pokedex.html">Check it out</a>
+        <a href="https://github.com/MarcelRegh/PokeDex" class="git-link"><img class="mt-16" src="assets/icons/icons8-github-48 (1).png"></a>
+      </div>
+    </div>
+  }
+
+  @if (javaScript) {
+    <div class="card">
+      <img src="assets/img/el-pollo-loco.png">
+      <div class="description">
+        <h3>El Pollo Loco</h3>
+        <p>A JavaScript Object Oriented based Jump and Run Game</p>
+        <a href="https://marcelregh.de/El-Pollo-Loco/El_Pollo_Loco.html">Check it out</a>
+        <a href="https://github.com/MarcelRegh/El_Pollo_loco" class="git-link"><img class="mt-16" src="assets/icons/icons8-github-48 (1).png"></a>
+      </div>
+    </div>
+  }
+</div>
+</div>
