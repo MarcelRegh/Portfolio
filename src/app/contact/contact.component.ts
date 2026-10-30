@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'app-contact',
@@ -24,17 +25,19 @@ export class ContactComponent implements OnInit {
    */
   post = {
     // Where to send the post request Ex. www.my-domain/sendMail.php
-    endPoint: 'https://marcelregh.de/send_mail/send_mail.php',
+    endPoint: '/send_mail/send_mail.php',
     // What to send, notice JSON.stringify
     body: (payload: any) => JSON.stringify(payload),
     // How to send, notice Content-Type and responseType
     options: {
       headers: {
         'Content-Type': 'text/plain',
-        responseType: 'text',
       },
+      responseType: 'text' as const,
     },
   };
+
+  sendState: 'idle' | 'sending' | 'success' | 'error' = 'idle';
 
   constructor(private http: HttpClient) { }
 
@@ -43,14 +46,20 @@ export class ContactComponent implements OnInit {
   /**
    * Do not forget to import FormsModule in app.module.ts
    */
-  onSubmit(ngForm) {
+  onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
+      this.sendState = 'sending';
       this.http
-        .post(this.post.endPoint, this.post.body(this.contact))
+        .post(this.post.endPoint, this.post.body(this.contact), this.post.options)
         .subscribe({
-          next: (response) =>{ console.log(response); ngForm.resetForm() },
-          error: (error) => console.error(error),
-          complete: () => console.info('send post complete'),
+          next: () => {
+            this.sendState = 'success';
+            ngForm.resetForm();
+          },
+          error: (error: HttpErrorResponse) => {
+            console.error('Unable to send contact form:', error);
+            this.sendState = 'error';
+          },
         });
     }
   }

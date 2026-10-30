@@ -1,74 +1,133 @@
 #contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
 }
 
 header {
-    margin-bottom: 64px;
+  width: 50%;
+  margin-bottom: 64px;
 
-    h1 {
-        color: #2dfcd8;
-        margin-top: 0;
-        margin-bottom: 5px;
+  h1 {
+    color: #2dfcd8;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .e-mail {
+    color: #2dfcd8;
+
+    &:hover {
+      cursor: pointer;
     }
-
-    .e-mail {
-        color: #2dfcd8;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
+  }
 }
 
-::ng-deep {
-    .mat-form-field-appearance-outline .mat-form-field-outline {
-        color: #2dfcd8;
-        background-color: #1a1a1a;
-    }
-    
-    mat-form-field {
-        .mat-form-field-label {
-            color: #2dfcd8;
-        }
-    }
-}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
-textarea {
+  label {
+    color: #2dfcd8;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #2dfcd8;
+    border-radius: 4px;
+    outline: none;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font: inherit;
+    caret-color: #ffffff;
+    transition: border-color 225ms ease-in-out, box-shadow 225ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        border-color: #2dfcd8;
+        box-shadow: 0 0 0 1px #2dfcd8;
+    }
+
+    &.invalid {
+        border-color: #ff5a5f;
+        box-shadow: 0 0 0 1px #ff5a5f;
+    }
+  }
+
+  input {
+    height: 56px;
+    padding: 0 16px;
+  }
+
+  textarea {
     height: 150px;
-    resize: none !important;
-    color: white;
-}
+    min-height: 150px;
+    padding: 16px;
+    resize: none;
+  }
 
-input {
-    color: white;
+  .error-message {
+    color: #ff5a5f;
+    font-size: 14px;
+  }
 }
 
 button {
-    height: 50px;
-    width: 100px;
-    color: #2dfcd8;
-    border: 1px solid #2dfcd8;
-    background-color: #1a1a1a;
+  height: 50px;
+  width: 100px;
+  color: #2dfcd8;
+  border: 1px solid #2dfcd8;
+  background-color: #1a1a1a;
 
-    &:hover {
-        cursor: pointer;
-        color: white;
-        background-color: #2dfcd8;
-        transition: 225ms ease-in-out;
-    }
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #2dfcd8;
+    transition: 225ms ease-in-out;
+  }
+
+  .form-status {
+      text-align: center;
+      font-size: 14px;
+
+      &.success {
+          color: #2dfcd8;
+      }
+
+      &.error {
+          color: #ff5a5f;
+      }
+  }
+
+  &:disabled {
+    color: rgba(45, 252, 216, 0.45);
+    border-color: rgba(45, 252, 216, 0.45);
+    cursor: default;
+    background-color: #1a1a1a;
+  }
 }
 
 .contact-form {
-    width: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 @media (max-width: 650px) {
-    .contact-form {
-        width: 100%;
-    }
-    
+  header {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
 }
